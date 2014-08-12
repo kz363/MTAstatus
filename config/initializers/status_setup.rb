@@ -1,10 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
 
-def omglol
-	puts "*" * 500
-end
-
 # Add font color to status
 def color_status(status)
 	td = "<td style='cursor: pointer; color: #"

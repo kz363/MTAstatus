@@ -9,9 +9,6 @@ module MTAstatus
     config.after_initialize do
       update_cache
       system('bundle exec whenever --update-crontab')
-      trap("SIGINT") do
-      	puts "*"*500
-      end
     end
   end
 end
