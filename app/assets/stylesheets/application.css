@@ -16,15 +16,43 @@
 
 body {
 	width: 720px;
-	text-align: center;
 	margin: auto;
 }
 
-body #header {
+.header {
 	border: 1px dotted black;
 	margin-bottom: 5%;
+	text-align: center;
 }
 
-body #status {
+.status {
 	border: 1px dotted black;
+}
+
+.service_form {
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.service_table {
+	display: table;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 1.33em;
+	border: 1px solid green;
+	border-spacing: 10px;
+}
+
+.service_table table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.service_table td {
+
 }
