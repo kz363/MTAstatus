@@ -18,10 +18,12 @@ html{
 	background: url('/assets/subway.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
+	height: 100%;
 }
 
 body {
 	width: 720px;
+	height: 100%;
 	font-family: Helvetica;
 	margin: auto;
 	background: rgb(255, 255, 255);
@@ -68,4 +70,15 @@ h5 {
 .service_table table {
 	margin: 0 auto;
 	border-spacing: 10px;
+}
+
+.reroute_modal {
+	position: absolute;
+	overflow: auto;
+	display: none;
+	height: 95%;
+	width: 720px;
+	top: 2.5%;
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.9);
 }

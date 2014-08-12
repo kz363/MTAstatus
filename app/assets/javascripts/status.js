@@ -1,6 +1,7 @@
-var Status = {
+var View = {
   init: function() {
     this.setupStatuses();
+    this.setupReroutes();
   },
   setupStatuses: function() {
     var self = this;
@@ -19,5 +20,29 @@ var Status = {
         $('.status').append(response);
       });
     });
+  },
+  setupReroutes: function() {
+    var self = this;
+    $('body').on('click', '.service', function(event) {
+      event.preventDefault();
+      line = $(this).prev().text();
+
+      var request = $.ajax({
+                      url: "/reroute/" + line,
+                      type: "GET"
+                    });
+
+      request.done(function(response) {
+        $(".reroute_modal").html("");
+        $('.reroute_modal').append(response);
+        $('.reroute_modal').show();
+      });
+    });
+
+    $('html').on('click', function(event) {
+      $(".reroute_modal").html("");
+      $('.reroute_modal').hide();
+    });
+
   }
 };
