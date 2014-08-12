@@ -12,12 +12,31 @@ status_header = "<h4>Service Status as of #{timestamp}</h4>"
 # The values are an HTML string of a table to append to the page
 service_statuses = Hash.new("<div class='service_table'>#{status_header}<table>")
 
+# Add font color to status
+def color_status(status)
+	td = "<td style='color: #"
+
+	case status[0]
+	when "G"
+		td += "060'>"
+	when "S"
+		td += "5d0dff'>"
+	when "P"
+		td += "996600'>"
+	when "D"
+		td += "990033'>"
+	end
+
+	td + status + "</td>"
+end
+
 # Append line information as a row in the table
 xml.xpath('//line').each do |node| 
 	service = node.parent.name.downcase.to_sym
-	line_name = node.children[0].text
-	line_status = node.children[1].text
-	service_statuses[service] += "<tr><td>#{line_name}</td><td>#{line_status}</td></tr>" 
+	line_name = "<td>#{node.children[0].text}</td>"
+	line_status = node.children[1].text.downcase.split(' ').map(&:capitalize).join(' ')
+	colored_status = color_status(line_status)
+	service_statuses[service] += "<tr>#{line_name}#{colored_status}</tr>"
 end
 
 # Close HTML tags

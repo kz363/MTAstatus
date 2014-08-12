@@ -38,9 +38,12 @@ body {
 }
 
 .service_form {
-	width: 30%;
-	margin-left: auto;
-	margin-right: auto;
+	display: table;
+	margin: 0 auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 1.33em;
+	border: 1px solid black;
 }
 
 .service_table {
@@ -53,10 +56,9 @@ body {
 	padding-right: 5%;
 	padding-bottom: 1.33em;
 	border: 1px solid black;
-	border-spacing: 10px;
 }
 
 .service_table table {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto;
+	border-spacing: 10px;
 }
