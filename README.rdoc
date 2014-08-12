@@ -1,3 +1,3 @@
 == MTAstatus
 
-A simple web app to display MTA transit status.
+A simple Rails app to display MTA transit status.
