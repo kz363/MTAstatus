@@ -9,3 +9,5 @@ gem 'sqlite3'
 gem 'turbolinks'
 
 gem 'nokogiri'
+
+gem 'whenever'

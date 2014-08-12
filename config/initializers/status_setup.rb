@@ -1,6 +1,10 @@
 require 'nokogiri'
 require 'open-uri'
 
+def omglol
+	puts "*" * 500
+end
+
 # Add font color to status
 def color_status(status)
 	td = "<td style='color: #"
@@ -19,7 +23,7 @@ def color_status(status)
 	td + status + "</td>"
 end
 
-def write_to_cache
+def update_cache
 	uri = open('http://web.mta.info/status/serviceStatus.txt')
 	xml = Nokogiri::XML(uri) do |config| 
 					config.noblanks 
