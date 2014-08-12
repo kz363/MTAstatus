@@ -24,17 +24,28 @@ body {
 	width: 720px;
 	font-family: Helvetica;
 	margin: auto;
-	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.9);
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.9);
 }
 
 .header {
 	display: inline;
-	margin-bottom: 5%;
 	text-align: center;
 }
 
+h1 {
+	margin: 0;
+	font-size: 4em;
+}
+
+h5 {
+	font-style: italic;
+	font-weight: normal;
+	margin-top: 0;
+}
+
 .status {
-	padding-bottom: 0.1%;
+	padding-bottom: 1%;
 }
 
 .service_form {
@@ -48,13 +59,9 @@ body {
 
 .service_table {
 	display: table;
-	margin-top: 2%;
-	margin-bottom: 2%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 2% auto 2% auto;
 	padding-left: 5%;
 	padding-right: 5%;
-	padding-bottom: 1.33em;
 	border: 1px solid black;
 }
 
