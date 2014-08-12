@@ -14,19 +14,27 @@
  *= require_self
  */
 
+html{
+	background: url('/assets/subway.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
 body {
 	width: 720px;
+	font-family: Helvetica;
 	margin: auto;
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.9);
 }
 
 .header {
-	border: 1px dotted black;
+	display: inline;
 	margin-bottom: 5%;
 	text-align: center;
 }
 
 .status {
-	border: 1px dotted black;
+	padding-bottom: 0.1%;
 }
 
 .service_form {
@@ -44,15 +52,11 @@ body {
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-bottom: 1.33em;
-	border: 1px solid green;
+	border: 1px solid black;
 	border-spacing: 10px;
 }
 
 .service_table table {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.service_table td {
-
 }
